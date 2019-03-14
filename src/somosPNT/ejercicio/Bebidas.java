@@ -2,7 +2,7 @@ package somosPNT.ejercicio;
 
 public class Bebidas extends Productos {
 
-	Double litros;
+	private Double litros;
 
 	public Bebidas(String nombre, Integer precio, Double litros) {
 		super(nombre, precio);
@@ -21,7 +21,7 @@ public class Bebidas extends Productos {
 	@Override
 	public String toString() {
 
-		return "Nombre: " + nombre + " /// Litros: " + litros + " /// Precio: $" + precio + "\n";
+		return "Nombre: " + getNombre() + " /// Litros: " + litros + " /// Precio: $" + getPrecio() + "\n";
 	}
 
 }

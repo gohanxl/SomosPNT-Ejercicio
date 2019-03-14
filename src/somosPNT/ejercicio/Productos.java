@@ -2,11 +2,8 @@ package somosPNT.ejercicio;
 
 public class Productos implements Comparable<Productos> {
 
-	String nombre;
-	String unidadDeVenta;
-	Double litros;
-	Integer precio;
-	String contenido;
+	private String nombre;
+	private Integer precio;
 
 	public Productos(String nombre, Integer precio) {
 
@@ -31,36 +28,25 @@ public class Productos implements Comparable<Productos> {
 		this.precio = precio;
 	}
 
-	public String getUnidadDeVenta() {
-		return unidadDeVenta;
-	}
-
-	public void setUnidadDeVenta(String unidadDeVenta) {
-		this.unidadDeVenta = unidadDeVenta;
-	}
-
-	public Double getLitros() {
-		return litros;
-	}
-
-	public void setLitros(Double litros) {
-		this.litros = litros;
-	}
-
-	public String getContenido() {
-		return contenido;
-	}
-
-	public void setContenido(String contenido) {
-		this.contenido = contenido;
-	}
-	
 	/* Ítem 7 */
 
 	@Override
 	public int compareTo(Productos o) {
 
-		return this.precio.compareTo(o.getPrecio());
+		int resultado = 0;
+
+		if (this.precio < o.getPrecio()) {
+
+			resultado = -1;
+		} else if (this.precio > o.getPrecio()) {
+
+			resultado = 1;
+		} else {
+
+			resultado = 0;
+		}
+
+		return resultado;
 	}
 
 }

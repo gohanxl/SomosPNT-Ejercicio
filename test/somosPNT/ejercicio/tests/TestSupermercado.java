@@ -1,5 +1,7 @@
 package somosPNT.ejercicio.tests;
 
+import java.util.Collections;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -42,6 +44,12 @@ public class TestSupermercado {
 
 		System.out.println(supermercado1);
 
+		/* Ordeno lista para mostrar el funcionamiento del Comparable*/
+		
+		Collections.sort(supermercado1.getProductos());
+		Collections.reverse(supermercado1.getProductos());
+
+		System.out.println("/~~~~~~~~~~~~~~~~~~~~~~/\n\nLISTA ORDENADA CON COMPARABLE \n\n" + supermercado1);
 	}
 
 }

@@ -2,7 +2,7 @@ package somosPNT.ejercicio;
 
 public class Comidas extends Productos {
 
-	String unidadDeVenta;
+	private String unidadDeVenta;
 
 	public Comidas(String nombre, String unidadDeVenta, Integer precio) {
 		super(nombre, precio);
@@ -22,7 +22,7 @@ public class Comidas extends Productos {
 	@Override
 	public String toString() {
 
-		return "Nombre: " + nombre + " /// Precio: $" + precio + " /// Unidad de Venta: " + unidadDeVenta + "\n";
+		return "Nombre: " + getNombre() + " /// Precio: $" + getPrecio() + " /// Unidad de Venta: " + unidadDeVenta + "\n";
 	}
 
 }

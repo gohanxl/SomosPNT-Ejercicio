@@ -7,10 +7,10 @@ public class Supermercado {
 
 	private List<Productos> listaDeProductos;
 
-	Integer precioMasCaro;
-	Integer precioMasBarato;
-	String productoMasCaro;
-	String productoMasBarato;
+	private Integer precioMasCaro;
+	private Integer precioMasBarato;
+	private String productoMasCaro;
+	private String productoMasBarato;
 
 	public Supermercado() {
 
@@ -18,13 +18,12 @@ public class Supermercado {
 
 	}
 
-	
-	/* Ítem  6 */
-	
+	/* Ítem 6 */
+
 	public void productosMayorMenorPrecio() {
 
-		precioMasCaro = listaDeProductos.get(0).getPrecio();
-		precioMasBarato = listaDeProductos.get(0).getPrecio();
+		precioMasCaro = 0;
+		precioMasBarato = 9999999;
 
 		for (Productos e : listaDeProductos) {
 
@@ -44,7 +43,7 @@ public class Supermercado {
 	}
 
 	/* Ítem 4 */
-	
+
 	public void agregarProducto(Productos producto) {
 
 		listaDeProductos.add(producto);
@@ -60,11 +59,11 @@ public class Supermercado {
 	}
 
 	/* Ítem 5 y 7 */
-	
+
 	@Override
 	public String toString() {
 
-		StringBuffer StringConsola = new StringBuffer("");
+		final StringBuffer StringConsola = new StringBuffer("");
 
 		for (Productos e : listaDeProductos) {
 

@@ -2,7 +2,7 @@ package somosPNT.ejercicio;
 
 public class Limpieza extends Productos {
 
-	String contenido;
+	private String contenido;
 
 	public Limpieza(String nombre, String contenido, Integer precio) {
 		super(nombre, precio);
@@ -21,7 +21,7 @@ public class Limpieza extends Productos {
 	@Override
 	public String toString() {
 
-		return "Nombre: " + nombre + " /// Contenido: " + contenido + " /// Precio: $" + precio + "\n";
+		return "Nombre: " + getNombre() + " /// Contenido: " + contenido + " /// Precio: $" + getPrecio() + "\n";
 
 	}
 
