@@ -6,42 +6,16 @@ import java.util.List;
 public class Supermercado {
 
 	private List<Productos> listaDeProductos;
-
-	private Integer precioMasCaro;
-	private Integer precioMasBarato;
 	private String productoMasCaro;
 	private String productoMasBarato;
 
 	public Supermercado() {
 
 		listaDeProductos = new ArrayList<Productos>();
-
+		
 	}
 
-	/* Ítem 6 */
-
-	public void productosMayorMenorPrecio() {
-
-		precioMasCaro = 0;
-		precioMasBarato = 9999999;
-
-		for (Productos e : listaDeProductos) {
-
-			if (e.getPrecio() > precioMasCaro) {
-
-				precioMasCaro = e.getPrecio();
-				productoMasCaro = e.getNombre();
-			}
-
-			if (e.getPrecio() < precioMasBarato) {
-
-				precioMasBarato = e.getPrecio();
-				productoMasBarato = e.getNombre();
-
-			}
-		}
-	}
-
+	
 	/* Ítem 4 */
 
 	public void agregarProducto(Productos producto) {
@@ -58,6 +32,23 @@ public class Supermercado {
 		listaDeProductos = productos;
 	}
 
+	public String getProductoMasCaro() {
+		return productoMasCaro;
+	}
+
+	public void setProductoMasCaro(String productoMasCaro) {
+		this.productoMasCaro = productoMasCaro;
+	}
+
+	public String getProductoMasBarato() {
+		return productoMasBarato;
+	}
+
+	public void setProductoMasBarato(String productoMasBarato) {
+		this.productoMasBarato = productoMasBarato;
+	}
+
+	
 	/* Ítem 5 y 7 */
 
 	@Override
@@ -70,8 +61,7 @@ public class Supermercado {
 			StringConsola.append(e.toString());
 
 		}
-		return StringConsola.toString() + "\n======================\n \nProducto mas caro: " + productoMasCaro
-				+ "\nProducto mas barato: " + productoMasBarato + "\n";
+		return StringConsola.toString() + "\n======================\n";
 	}
 
 }

@@ -1,11 +1,12 @@
 package somosPNT.ejercicio;
 
-public class Productos implements Comparable<Productos> {
+public class Productos extends Supermercado implements Comparable<Productos> {
 
 	private String nombre;
 	private Integer precio;
 
 	public Productos(String nombre, Integer precio) {
+		super();
 
 		this.nombre = nombre;
 		this.precio = precio;
@@ -38,12 +39,11 @@ public class Productos implements Comparable<Productos> {
 		if (this.precio < o.getPrecio()) {
 
 			resultado = -1;
+
 		} else if (this.precio > o.getPrecio()) {
 
 			resultado = 1;
-		} else {
 
-			resultado = 0;
 		}
 
 		return resultado;

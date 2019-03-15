@@ -40,16 +40,19 @@ public class TestSupermercado {
 		supermercado1.agregarProducto(producto3);
 		supermercado1.agregarProducto(producto4);
 
-		supermercado1.productosMayorMenorPrecio();
+		// supermercado1.productosMayorMenorPrecio();
 
 		System.out.println(supermercado1);
 
-		/* Ordeno lista para mostrar el funcionamiento del Comparable*/
-		
+		/* Ordeno lista para mostrar el funcionamiento del Comparable */
+
 		Collections.sort(supermercado1.getProductos());
 		Collections.reverse(supermercado1.getProductos());
 
-		System.out.println("/~~~~~~~~~~~~~~~~~~~~~~/\n\nLISTA ORDENADA CON COMPARABLE \n\n" + supermercado1);
+		System.out.println("Producto mas Caro: " + supermercado1.getProductos().get(0).getNombre());
+		System.out.println("Producto mas Barato: "
+				+ supermercado1.getProductos().get(supermercado1.getProductos().size() - 1).getNombre());
+
 	}
 
 }
